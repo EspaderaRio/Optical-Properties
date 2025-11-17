@@ -387,5 +387,49 @@
         font-size: 24px;
       }
     }
+#zoomOverlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#zoomContent {
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s ease;
+  margin: 0 0 10px 0;
+  color: #314c9c;
+  font-size: 50px;
+  font-weight: 400;
+  background-color: white;
+  width: 50%;
+  max-width: 900px;
+  max-height: 90%;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  transform: scale(0.8);
+  transition: transform 0.3s;
+}
+
+#zoomOverlay.show #zoomContent {
+  transform: scale(1);
+}
+
+#closeZoom {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
     
 @view-transition { navigation: auto; }
