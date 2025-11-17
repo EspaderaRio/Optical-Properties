@@ -101,74 +101,202 @@
   `
 },
       {
-        id: "sec-21-2",
-        number: "21.2",
-        title: "Electromagnetic Radiation",
-        content: `
-          <p>Light is electromagnetic radiation that exhibits both wave and particle properties. Understanding its nature is essential for studying optical phenomena.</p>
-          <h3>Wave Characteristics</h3>
-          <p>Electromagnetic radiation can be described by:</p>
-          <div class="concept-grid">
-            <div class="concept-card">
-              <h4>λ - Wavelength</h4>
-              <p>Distance between successive wave peaks (measured in nanometers for visible light)</p>
-            </div>
-            <div class="concept-card">
-              <h4>ν - Frequency</h4>
-              <p>Number of waves passing a point per second (Hz)</p>
-            </div>
-            <div class="concept-card">
-              <h4>c - Velocity</h4>
-              <p>Speed of light in vacuum: 3 × 10⁸ m/s</p>
-            </div>
-            <div class="concept-card">
-              <h4>E - Energy</h4>
-              <p>Energy of photons: E = hν (h is Planck's constant)</p>
-            </div>
-          </div>
-          <div class="highlight-box">
-            <h4>The Electromagnetic Spectrum</h4>
-            <p>Visible light (400-700 nm) is just a small portion of the electromagnetic spectrum, which ranges from radio waves to gamma rays. Different materials interact differently with various wavelengths.</p>
-          </div>
-          <p><strong>Key Relationship:</strong> c = λν (velocity = wavelength × frequency)</p>
-          <p>This relationship means that as wavelength increases, frequency decreases, and vice versa.</p>
-        `
-      },
-      {
-        id: "sec-21-3",
-        number: "21.3",
-        title: "Light Interactions with Solids",
-        content: `
-          <p>When light encounters a solid material, several phenomena can occur simultaneously. The relative magnitude of each determines the material's optical behavior.</p>
-          <h3>Primary Interactions</h3>
-          <div class="concept-grid">
-            <div class="concept-card">
-              <h4>📐 Reflection</h4>
-              <p>Light bounces off the surface, following the law of reflection (angle of incidence = angle of reflection)</p>
-            </div>
-            <div class="concept-card">
-              <h4>🔄 Refraction</h4>
-              <p>Light bends as it enters the material due to a change in velocity</p>
-            </div>
-            <div class="concept-card">
-              <h4>🎯 Absorption</h4>
-              <p>Light energy is converted to other forms (typically heat) as photons interact with atoms</p>
-            </div>
-            <div class="concept-card">
-              <h4>➡️ Transmission</h4>
-              <p>Light passes through the material without being absorbed or scattered</p>
-            </div>
-          </div>
-          <div class="highlight-box">
-            <h4>Energy Conservation</h4>
-            <p>The sum of reflected, absorbed, and transmitted light must equal the incident light intensity. This principle allows us to predict material behavior.</p>
-          </div>
-          <h3>Material Classification</h3>
-          <p><strong>Transparent:</strong> High transmission, low absorption (glass, clear plastics)</p>
-          <p><strong>Translucent:</strong> Partial transmission with scattering (frosted glass, wax paper)</p>
-          <p><strong>Opaque:</strong> No transmission, high reflection or absorption (metals, wood)</p>
-        `
-      },
+  id: "sec-21-2",
+  number: "21.2",
+  title: "Electromagnetic Radiation",
+  content: `
+    <p>Light is a form of <strong>electromagnetic (EM) radiation</strong>, meaning it consists of oscillating electric and magnetic fields that travel through space. These fields vibrate perpendicular to each other and to the direction of wave propagation, making light a <strong>transverse wave</strong>. Electromagnetic radiation does not require a medium and can travel through a vacuum, distinguishing it from mechanical waves such as sound.</p>
+
+    <h3>Dual Nature of Light</h3>
+    <p>Light exhibits both <strong>wave-like</strong> and <strong>particle-like</strong> behavior, a concept known as <em>wave–particle duality</em>. As a wave, it shows interference, diffraction, and refraction. As particles, light is composed of tiny packets of energy called <strong>photons</strong>, each carrying a discrete amount of energy.</p>
+
+    <h3>Wave Characteristics</h3>
+    <p>Electromagnetic radiation can be described by several fundamental wave properties:</p>
+
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h4>λ — Wavelength</h4>
+        <p>The distance between two consecutive peaks or troughs in a wave. For visible light, wavelengths range from 400–700 nm. Shorter wavelengths correspond to higher energy.</p>
+      </div>
+
+      <div class="concept-card">
+        <h4>ν — Frequency</h4>
+        <p>The number of complete wave cycles that pass a point per second (measured in Hz). Higher frequency means higher photon energy.</p>
+      </div>
+
+      <div class="concept-card">
+        <h4>c — Velocity</h4>
+        <p>The speed of light in a vacuum is a constant: <strong>c = 3 × 10⁸ m/s</strong>. In materials (like glass or water), light slows down depending on the material's optical density.</p>
+      </div>
+
+      <div class="concept-card">
+        <h4>E — Energy</h4>
+        <p>The energy of a single photon is given by <strong>E = hν</strong>, where h is Planck’s constant (6.626 × 10⁻³⁴ J·s). Higher frequency → higher energy.</p>
+      </div>
+    </div>
+
+    <h3>Polarization</h3>
+    <p>Because light is a transverse wave, its electric field can oscillate in different orientations. <strong>Polarization</strong> refers to restricting the direction of this oscillation. Polarized light is used in sunglasses, optical filters, LCD displays, and scattering studies.</p>
+
+    <div class="highlight-box">
+      <h4>The Electromagnetic Spectrum</h4>
+      <p>The EM spectrum spans a vast range of wavelengths, from long-wavelength <strong>radio waves</strong> to extremely short <strong>gamma rays</strong>. Visible light (400–700 nm) represents only a tiny portion. Different wavelengths interact with matter in distinct ways:</p>
+      <ul>
+        <li><strong>Infrared</strong> heats materials and is absorbed strongly by water.</li>
+        <li><strong>Ultraviolet</strong> can excite electrons and cause fluorescence.</li>
+        <li><strong>X-rays</strong> penetrate soft tissue but are absorbed by bone.</li>
+      </ul>
+      <p>Understanding how materials absorb, transmit, scatter, or reflect different wavelengths is crucial for optical analysis.</p>
+    </div>
+
+    <h3>Key Relationship</h3>
+    <p><strong>c = λν</strong> — The speed of light equals wavelength multiplied by frequency.</p>
+    <p>This relationship implies that:</p>
+    <ul>
+      <li>If wavelength increases, frequency decreases.</li>
+      <li>If wavelength decreases, energy increases.</li>
+      <li>In a medium, light slows down but its frequency stays constant — only wavelength changes.</li>
+    </ul>
+
+    <h3>Light in Materials</h3>
+    <p>When electromagnetic radiation enters a material, it can be:</p>
+    <ul>
+      <li><strong>absorbed</strong> — energy is taken up by atoms or molecules, often converting to heat</li>
+      <li><strong>reflected</strong> — light bounces off the surface depending on roughness and refractive index</li>
+      <li><strong>transmitted</strong> — light passes through the material</li>
+      <li><strong>refracted</strong> — direction changes due to varying speed in different media</li>
+      <li><strong>scattered</strong> — redirected in multiple directions</li>
+    </ul>
+    <p>The balance between these behaviors defines the <strong>optical properties</strong> of a material and determines how it interacts with specific wavelengths.</p>
+
+    <h3>Photon Model</h3>
+    <p>In the photon view, EM radiation consists of discrete packets of energy. The energy determines how photons interact with matter:</p>
+    <ul>
+      <li>Low-energy photons (radio, microwave) cause molecular rotation or vibration.</li>
+      <li>Mid-energy photons (visible light) can promote electrons to higher energy levels.</li>
+      <li>High-energy photons (UV, X-ray) can ionize atoms and damage molecules.</li>
+    </ul>
+
+    <p>Understanding these interactions is essential in fields such as spectroscopy, imaging, photonics, and optical engineering.</p>
+  `
+},
+     {
+  id: "sec-21-3",
+  number: "21.3",
+  title: "Light Interactions with Solids",
+  content: `
+    <p>When light encounters a solid material, it undergoes a combination of interactions that determine how the material looks and behaves under illumination. These interactions depend on the material’s electronic structure, bonding, microstructure, and surface characteristics. Understanding these interactions is essential for designing optical components, coatings, and technologically advanced materials.</p>
+
+    <h3>Primary Interactions with Light</h3>
+    <p>A single beam of light may experience multiple outcomes when striking a solid. The main processes include:</p>
+
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h4>📐 Reflection</h4>
+        <p>Light bounces off the surface of a material. Reflection may be <strong>specular</strong> (mirror-like, smooth surfaces) or <strong>diffuse</strong> (scattered in many directions due to surface roughness). The angle of reflection always equals the angle of incidence.</p>
+      </div>
+
+      <div class="concept-card">
+        <h4>🔄 Refraction</h4>
+        <p>Light changes direction as it enters a material with a different optical density. This bending is described by <strong>Snell’s Law</strong>, and the magnitude of bending depends on the refractive index. Higher refractive index → slower light → stronger bending.</p>
+      </div>
+
+      <div class="concept-card">
+        <h4>🎯 Absorption</h4>
+        <p>Photons transfer their energy to electrons or lattice vibrations (phonons), causing electronic transitions or heat generation. Materials with strong absorption appear dark or colored depending on which wavelengths are absorbed.</p>
+      </div>
+
+      <div class="concept-card">
+        <h4>➡️ Transmission</h4>
+        <p>Light passes through the material with minimal absorption. Transmission quality depends on purity, thickness, crystal structure, and band gap.</p>
+      </div>
+
+      <div class="concept-card">
+        <h4>🌫 Scattering</h4>
+        <p>Light is redirected by irregularities, defects, or microscopic structures. Scattering affects brightness, haze, and translucency. Larger particles cause Mie scattering; smaller particles cause Rayleigh scattering.</p>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h4>Energy Conservation in Optics</h4>
+      <p>The optical interactions follow the relationship:</p>
+      <p style="text-align:center; font-weight:bold;">R + A + T = 1</p>
+      <p>where <strong>R</strong> = reflection, <strong>A</strong> = absorption, and <strong>T</strong> = transmission, each expressed as fractions of the incident light. This balance allows scientists to quantify material transparency, color, and reflectivity.</p>
+    </div>
+
+    <h3>How Electronic Structure Influences Behavior</h3>
+    <p>The way a material interacts with light is controlled primarily by its electronic band structure:</p>
+    <ul>
+      <li><strong>Insulators:</strong> Large band gaps prevent electrons from absorbing visible light → materials appear transparent or colorless.</li>
+      <li><strong>Semiconductors:</strong> Moderate band gaps absorb specific wavelengths → responsible for solar cell and LED behavior.</li>
+      <li><strong>Metals:</strong> Free electrons reflect most incident light → metals appear shiny and opaque.</li>
+    </ul>
+
+    <h3>Material Classification</h3>
+    <p>Based on how they allow or restrict transmission of light, materials fall into three broad categories:</p>
+
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h4>🔍 Transparent</h4>
+        <p>Transmit light with minimal scattering or absorption. Examples include clear glass, acrylic, and certain crystals. Common in lenses, screens, and optical fibers.</p>
+      </div>
+
+      <div class="concept-card">
+        <h4>🌥 Translucent</h4>
+        <p>Allow light to pass but scatter it strongly, producing a diffuse glow. Examples include frosted glass, wax paper, and some ceramics. Used for soft lighting and privacy panels.</p>
+      </div>
+
+      <div class="concept-card">
+        <h4>⬛ Opaque</h4>
+        <p>Absorb or reflect nearly all incident light; no transmission occurs. Examples include metals, wood, stone, and heavily pigmented plastics.</p>
+      </div>
+    </div>
+
+    <h3>Advanced Light–Material Interactions</h3>
+    <p>Modern optical technologies rely on more complex interactions beyond simple reflection or absorption:</p>
+    <ul class="styled-list">
+      <li><strong>Interference:</strong> Thin films (soap bubbles, anti-reflective coatings) produce color patterns due to phase differences.</li>
+      <li><strong>Diffraction:</strong> Light bends around edges or passes through periodic structures, enabling holography and grating spectrometers.</li>
+      <li><strong>Photoluminescence:</strong> Materials absorb high-energy light and re-emit it at lower energies (fluorescent lamps, quantum dots).</li>
+      <li><strong>Nonlinear optics:</strong> At high intensities, materials generate new frequencies of light (harmonic generation, optical switching).</li>
+    </ul>
+
+    <div class="note-box">
+      <h4>Did You Know?</h4>
+      <p>The bright colors of butterfly wings and peacock feathers are not caused by pigments, but by <strong>structural coloration</strong>—microscopic layers that manipulate light through interference and scattering.</p>
+    </div>
+
+    <h3>Real-World Applications</h3>
+    <p>Understanding how solids interact with light enables innovations across science and industry:</p>
+
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h4>📱 Display Technologies</h4>
+        <p>LCD and OLED screens rely on precise control of absorption, transmission, and emission.</p>
+      </div>
+
+      <div class="concept-card">
+        <h4>🔋 Renewable Energy</h4>
+        <p>Solar cells use engineered semiconductors to maximize absorption while minimizing reflection.</p>
+      </div>
+
+      <div class="concept-card">
+        <h4>⚙️ Optics & Imaging</h4>
+        <p>Lenses, prisms, and mirrors are designed using controlled refraction and reflective coatings.</p>
+      </div>
+
+      <div class="concept-card">
+        <h4>🎨 Materials Design</h4>
+        <p>Coatings, pigments, and photonic structures create specific colors, gloss levels, and finishes.</p>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h4>Summary</h4>
+      <p>The interaction of light with solids is governed by fundamental physical principles involving electronic structure, surface roughness, and microstructure. By understanding these interactions, engineers and scientists design materials for advanced optical technologies—from everyday glass windows to complex photonic devices.</p>
+    </div>
+  `
+},
       {
         id: "sec-21-4",
         number: "21.4",
