@@ -4,8 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Optical Properties Learning Hub</title>
-  <script src="/_sdk/data_sdk.js"></script>
-  <script src="/_sdk/element_sdk.js"></script>
+  <script>
+   // ===================== DATA SDK ===================== //
+
+(function () {
+  const STORAGE_KEY = "optical_properties_records";
+
+  function load() {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : [];
+  }
+
+  function save(data) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }
+
+  window.dataSdk = {
+    handler: null,
+
+    async init(handler) {
+      this.handler = handler || null;
+      const data = load();
+
+      // Notify main script
+      if (this.handler && this.handler.onDataChanged) {
+        this.handler.onDataChanged(data);
+      }
+
+      return { isOk: true };
+    },
+
+    getAll() {
+      return load();
+    },
+
+    async create(record) {
+      const data = load();
+      data.push(record);
+
+      save(data);
+
+      if (this.handler?.onDataChanged) {
+        this.handler.onDataChanged(data);
+      }
+
+      return record;
+    },
+
+    async update(updatedRecord) {
+      const data = load();
+      const index = data.findIndex(r => r.section_id === updatedRecord.section_id);
+
+      if (index !== -1) {
+        data[index] = updatedRecord;
+        save(data);
+
+        if (this.handler?.onDataChanged) {
+          this.handler.onDataChanged(data);
+        }
+
+        return updatedRecord;
+      }
+
+      console.warn("[dataSdk] Tried to update non-existing record", updatedRecord);
+      return null;
+    }
+  };
+})();
+
+  </script>
+  <script>
+   // ===================== ELEMENT SDK ===================== //
+
+(function () {
+  let currentConfig = {};
+  let initOptions = null;
+
+  function applyConfig() {
+    if (initOptions && typeof initOptions.onConfigChange === "function") {
+      initOptions.onConfigChange(currentConfig);
+    }
+  }
+
+  window.elementSdk = {
+    init(options) {
+      initOptions = options;
+      currentConfig = { ...options.defaultConfig };
+
+      // Apply defaults immediately
+      applyConfig();
+
+      return Promise.resolve({ ok: true });
+    },
+
+    // Update a subset of config values
+    setConfig(partialConfig) {
+      currentConfig = { ...currentConfig, ...partialConfig };
+
+      // Apply changes
+      applyConfig();
+    },
+
+    // Return full configuration
+    getConfig() {
+      return currentConfig;
+    }
+  };
+})();
+  </script>
   <link rel="stylesheet" href="style.css">
   <script src="tailwindcss.js" type="text/javascript"></script>
  </head>
