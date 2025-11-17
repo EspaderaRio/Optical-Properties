@@ -1752,6 +1752,7 @@
       }
       
       updateSectionList();
+        setupConceptCardZoom();
     }
 
     async function markSectionComplete() {
@@ -1781,6 +1782,33 @@
 
       completeBtn.disabled = false;
     }
+
+function setupConceptCardZoom() {
+  const cards = document.querySelectorAll("#section-content .concept-card");
+  const overlay = document.getElementById("zoomOverlay");
+  const zoomContent = document.getElementById("zoomContent");
+  const closeBtn = document.getElementById("closeZoom");
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      zoomContent.innerHTML = card.innerHTML;
+      overlay.style.display = "flex";
+      setTimeout(() => overlay.classList.add("show"), 10);
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    overlay.classList.remove("show");
+    setTimeout(() => (overlay.style.display = "none"), 300);
+  });
+
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove("show");
+      setTimeout(() => (overlay.style.display = "none"), 300);
+    }
+  });
+}
 
     function showQuiz() {
       const quizQuestions = quizData[currentSection.id];
